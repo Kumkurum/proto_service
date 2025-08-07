@@ -1,0 +1,8 @@
+version: v1
+name: buf.build/Kumkurum/proto_service  # Для BSR (опционально)
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
