@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package logging.v1;
+
+import "common/v1/error.proto";
+
+
+message LoggingRequest{
+ enum Level {
+   DEBUG = 0;
+   INFO = 1;
+   WARN = 2;
+   CRITICAL = 3;
+ }
+ Level level = 1;
+ string service_name = 2;
+ map<string, string> message = 3;
+}
+
+message LoggingResponse{
+  Error result = 1;
+}
+
+
+service LoggingService {
+  rpc Logging(LoggingRequest) returns (LoggingResponse);
+}
