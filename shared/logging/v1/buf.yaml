@@ -1,0 +1,13 @@
+version: v1
+deps:
+  - ../../common/v1  # Импорт общих сообщений
+version: v1
+name: buf.build/logging/shared-proto
+deps:
+  - ../../common/v1  # Импорт общих сообщений
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - SERVICE
